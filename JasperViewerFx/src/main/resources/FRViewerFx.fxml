@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="view" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mgrecol.jasper.jasperviewerfx.JRViewerFxController">
+   <top>
+      <Pane prefHeight="52.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="25.0" layoutY="15.0" mnemonicParsing="false" onAction="#print" text="Print" />
+            <ComboBox fx:id="pageList" layoutX="300.0" layoutY="15.0" onAction="#pageListSelected" prefHeight="22.0" prefWidth="26.0" />
+            <Button layoutX="102.0" layoutY="15.0" mnemonicParsing="false" onAction="#save" text="Save" />
+              <Slider fx:id="zoomLevel" blockIncrement="25.0" layoutX="424.0" layoutY="23.0" majorTickUnit="75.0" max="175.0" min="25.0" minorTickCount="2" prefHeight="23.0" prefWidth="141.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+            <Label layoutX="239.0" layoutY="20.0" text="View Page" />
+            <Label layoutX="481.0" layoutY="4.0" text="Zoom" />
+
+         </children></Pane>
+   </top>
+   <center>
+      <ScrollPane prefHeight="500.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <content>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </content>
+      </ScrollPane>
+   </center>
+   <right>
+   </right>
+    <bottom>
+            <Accordion fx:id="resultAccordion" BorderPane.alignment="CENTER">
+              <panes>
+                <TitledPane fx:id="resultPane" animated="false" text="untitled 1" visible="false">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="resultDescription" layoutX="14.0" layoutY="7.0" text="Label" wrapText="true" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </bottom>
+</BorderPane>
