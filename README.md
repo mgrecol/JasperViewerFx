@@ -1,7 +1,7 @@
 JasperViewerFx
 ------------------
 
-JavaFx is a full featured Jasper report viewer written completely in JavaFx. 
+JasperViewrFx is a full featured Jasper report viewer written completely in JavaFx. 
 It has the following features:
 * View and zoom  all of the pages of a Jasper report document.
 * Export report documents to the following formats: PDF, PNG, DOCX, XLSX, HTML
